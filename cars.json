@@ -1,0 +1,26 @@
+{
+  "car": {
+    "year": "2017",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "trim": "Limited",
+    "color": "Red",
+    "style": "Sedan"
+  },
+  "car2": {
+    "year": "2019",
+    "make": "Kia",
+    "model": "Sportage",
+    "trim": "Ex",
+    "color": "White",
+    "style": "SUV"
+  },
+  "car3": {
+    "year": "2018",
+    "make": "Kia",
+    "model": "Forte",
+    "trim": "Lx",
+    "color": "Blue",
+    "style": "Sedan"
+  }
+}

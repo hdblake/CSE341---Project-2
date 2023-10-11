@@ -1,0 +1,24 @@
+{
+  "name": "cse---project-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint *.{js, jsx}",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+  },
+  "keywords": [],
+  "author": "Hunter Blake",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "eslint": "^8.51.0",
+    "express": "^4.18.2",
+    "mongodb": "^6.1.0",
+    "mongoose": "^7.6.1",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.3"
+  }
+}
