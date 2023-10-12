@@ -4,7 +4,7 @@ const ObjectId = require("mongodb").ObjectId;
 const getCars = async (req, res, next) => {
   const results = await mongoDb.getDb().db().collection("cars").find();
   results.toArray().then((cars) => {
-    res.status(201).json(cars);
+    res.status(200).json(cars);
   });
 };
 
