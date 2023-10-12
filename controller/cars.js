@@ -27,7 +27,7 @@ const addCar = async (req, res) => {
     model: req.body.model,
     trim: req.body.trim,
     color: req.body.color,
-    style: req.body.year
+    style: req.body.style
   };
 
   const result = await mongoDb.getDb().db().collection("cars").insertOne(car);
@@ -51,7 +51,7 @@ const updateCar = async (req, res) => {
     model: req.body.model,
     trim: req.body.trim,
     color: req.body.color,
-    style: req.body.year
+    style: req.body.style
   };
 
   const result = await mongoDb
