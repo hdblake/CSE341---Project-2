@@ -43,6 +43,32 @@ const addCar = async (req, res) => {
   }
 };
 
+const updateCar = async (req, res) => {
+  const carId = new ObjectId(req.params.id);
+  const car = {
+    year: req.body.year,
+    make: req.body.make,
+    model: req.body.model,
+    trim: req.body.trim,
+    color: req.body.color,
+    style: req.body.year
+  };
+
+  const result = await mongoDb
+    .getDb()
+    .db()
+    .collection("cars")
+    .replaceOne({ _id: carId }, car);
+
+  if (result.modifiedCount > 0) {
+    res.status(201).send();
+  } else {
+    res
+      .status(500)
+      .json(result.error || "An error occured updating car, please try again.");
+  }
+};
+
 const deleteCar = async (req, res) => {
   const carId = new ObjectId(req.params.id);
 
@@ -67,5 +93,6 @@ module.exports = {
   getCars,
   getOneCar,
   addCar,
+  updateCar,
   deleteCar
 };
