@@ -20,7 +20,52 @@ const getOneCar = async (req, res, next) => {
   });
 };
 
+const addCar = async (req, res) => {
+  const car = {
+    year: req.body.year,
+    make: req.body.make,
+    model: req.body.model,
+    trim: req.body.trim,
+    color: req.body.color,
+    style: req.body.year
+  };
+
+  const result = await mongoDb.getDb().db().collection("cars").insertOne(car);
+
+  if (result.acknowledged) {
+    res.status(201).json(result);
+  } else {
+    res
+      .status(500)
+      .json(
+        result.error || "An error occured adding the vehicle, please try again."
+      );
+  }
+};
+
+const deleteCar = async (req, res) => {
+  const carId = new ObjectId(req.params.id);
+
+  const result = await mongoDb
+    .getDb()
+    .db()
+    .collection("cars")
+    .deleteOne({ _id: carId }, carId);
+
+  if (result.deletedCount > 0) {
+    res.status(201).send();
+  } else {
+    res
+      .status(500)
+      .json(
+        result.error || "An error occured deleting the car, please try again."
+      );
+  }
+};
+
 module.exports = {
   getCars,
-  getOneCar
+  getOneCar,
+  addCar,
+  deleteCar
 };
