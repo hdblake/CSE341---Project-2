@@ -1,0 +1,20 @@
+GET http://localhost:3005/cars HTTP/1.1
+
+###
+GET http://localhost:3005/cars/65276934a5e5964fd78aa971 HTTP/1.1
+
+###
+POST http://localhost:3005/cars HTTP/1.1
+Content-Type: application/json
+
+{
+    "year": "2019",
+    "make": "Honda",
+    "model": "Odyssey",
+    "trim": "Ex",
+    "color": "Gray",
+    "style": "SUV"
+}
+
+###
+DELETE http://localhost:3005/cars/65276b561f44a43793032b7c HTTP/1.1
