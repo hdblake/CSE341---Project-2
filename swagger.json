@@ -9,23 +9,12 @@
   "basePath": "/",
   "schemes": "https",
   "paths": {
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
     "/cars/": {
       "get": {
         "description": "",
-        "produces": ["application/json"],
         "responses": {
-          "200": {
-            "description": "OK"
+          "201": {
+            "description": "Created"
           }
         }
       },
@@ -70,7 +59,6 @@
     "/cars/{id}": {
       "get": {
         "description": "",
-        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -101,6 +89,16 @@
           },
           "500": {
             "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
           }
         }
       }
