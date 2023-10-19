@@ -16,7 +16,7 @@ const validate = (req, res, next) => {
   if (errors.isEmpty()) {
     return next();
   }
-  res.send({ errors: errors.array() });
+  res.status(400).send({ errors: errors.array() });
 };
 
 module.exports = {
