@@ -9,6 +9,26 @@
   "basePath": "/",
   "schemes": "https",
   "paths": {
+    "/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/profile": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api-docs": {
       "get": {
         "description": "",
@@ -47,6 +67,9 @@
                   "example": "any"
                 },
                 "trim": {
+                  "example": "any"
+                },
+                "drive": {
                   "example": "any"
                 },
                 "color": {
@@ -114,6 +137,9 @@
                   "example": "any"
                 },
                 "trim": {
+                  "example": "any"
+                },
+                "drive": {
                   "example": "any"
                 },
                 "color": {
