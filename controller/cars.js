@@ -26,6 +26,7 @@ const addCar = async (req, res) => {
     make: req.body.make,
     model: req.body.model,
     trim: req.body.trim,
+    drive: req.body.drive,
     color: req.body.color,
     style: req.body.style
   };
@@ -50,6 +51,7 @@ const updateCar = async (req, res) => {
     make: req.body.make,
     model: req.body.model,
     trim: req.body.trim,
+    drive: req.body.drive,
     color: req.body.color,
     style: req.body.style
   };
