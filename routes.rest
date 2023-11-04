@@ -14,6 +14,7 @@ Content-Type: application/json
     "make": "Honda",
     "model": "Odyssey",
     "trim": "EX",
+    "drive": "FWD",
     "color": "Gray",
     "style": "SUV"
 }
@@ -27,6 +28,7 @@ Content-Type: application/json
     "make": "Honda",
     "model": "Odyssey",
     "trim": "EX-L",
+    "drive": "AWD",
     "color": "Gray",
     "style": "SUV"
 }
@@ -51,6 +53,7 @@ Content-Type: application/json
     "make": "Honda",
     "model": "Odyssey",
     "trim": "Ex",
+    "drive": "FWD",
     "color": "Gray",
     "style": "SUV"
 }
@@ -64,6 +67,7 @@ Content-Type: application/json
     "make": "Honda",
     "model": "Odyssey",
     "trim": "EX-L",
+    "drive": "AWD",
     "color": "Gray",
     "style": "SUV"
 }
